@@ -1,0 +1,37 @@
+import gspread
+import telebot
+
+bot_token = "5472000768:AAGvBaIXAeyMltvMrOZ2Ol8U4QaRmGZPOyA"
+bot = telebot.Telebot(bot_token)
+
+
+# gc = gspread.servise_account(filename="credentials.json")
+# sh = gc.open_by_key("1HzeejGfu2EeFsiO1FAgQn5qh9kNuFxHp7JsqzFPtUiA")
+# print(sh.sheet1.get("A1:B1"))
+
+name_user = ""
+mood = ""
+
+
+
+@bot.message_handler(commands=["start", "help"])
+def send_welcom(message):
+    bot.reply_to(message, "Привет! Я ещё маленький бот и пока ещё ничего не умею!")
+
+
+@bot.message_handler(func=lambda m: True)
+def add_name(message):
+    global mood
+    mood = message.text
+    print(name_user)
+    bot.send_message(message.from_user.id, "Какое у тебя настроение")
+    bot.register_next_step_handler(message, send_to_sheet)
+
+
+def send_to_sheet(message):
+    lst = gs.open_by_key("1HzeejGfu2EeFsiO1FAgQn5qh9kNuFxHp7JsqzFPtUiA")
+    lst.sheet1.append_row([name_user, mood])
+
+
+    bot.polling(none_stop=True)
+    
