@@ -1,10 +1,14 @@
-# 10.3
-# Дан словарь:
-# days = { 1:'Sun', 2:'Mon', 3:'Tue', 4:'Wed', 5:'Thu', 6:'Fri', 7:’Sat’}
-# Записать его в файл построчно.
+# 8.4
+# Создайте следующий словарь: ключи – BMW, Tesla;
+# значения – список из 3х моделей.
+# Выведите 1ое и последнее значения каждого из ключей.
 
-days = {1: 'Sun', 2: 'Mon', 3: 'Tue', 4: 'Wed', 5: 'Thu', 6: 'Fri', 7: 'Sat'}
-with open("ДЗ_11.txt", "w") as f:
-    for k, v in days.items():
-        f.write("{}:{}\n".format(k,v))
-print()
+car_1 = "BMW"
+model_1 = "M5", "i8", "X4"
+car_2 = "Tesla"
+model_2 = "Cybertruck", "Roadster", "Model_Y"
+d = {car_1: model_1, car_2: model_2}
+print(d)
+
+# print("lalala")
+# print("bubub")
