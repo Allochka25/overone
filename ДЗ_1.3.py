@@ -8,3 +8,4 @@ with open("ДЗ_11.txt", "w") as f:
     for k, v in days.items():
         f.write("{}:{}\n".format(k,v))
 print()
+print("Wow")
