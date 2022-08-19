@@ -9,6 +9,3 @@ car_2 = "Tesla"
 model_2 = "Cybertruck", "Roadster", "Model_Y"
 d = {car_1: model_1, car_2: model_2}
 print(d)
-
-# print("lalala")
-# print("bubub")
