@@ -32,6 +32,5 @@ def send_to_sheet(message):
     lst = gs.open_by_key("1HzeejGfu2EeFsiO1FAgQn5qh9kNuFxHp7JsqzFPtUiA")
     lst.sheet1.append_row([name_user, mood])
 
-
     bot.polling(none_stop=True)
-    
+   
