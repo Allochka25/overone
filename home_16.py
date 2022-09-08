@@ -156,76 +156,76 @@
 # Удалить в дочерних классах те методы, которые имеются у родительского класса.
 # Создать объект каждого класса и вызвать все его методы.
 
-# class Pet:
-#     def __init__(self, name, age, master):
-#         self.name = name
-#         self.age = age
-#         self.master = master
-#         self.born_year = None
-#
-#     def jump(self):
-#         return f"животное {self.name} умеет прыгает"
-#
-#     def run(self):
-#         return f"{self.name} любит бегать"
-#
-#     def birthday(self, current_year):
-#         if not self.born_year:
-#             self.born_year = current_year - self.age
-#         return f"{self.name} родился в {self.born_year}"
-#
-#     def sleep(self):
-#         return f"{self.name} сладко спит"
-#
-#
-# class Dog(Pet):
-#
-#     def __init__(self, name, age, master):
-#         super().__init__(name, age, master)
-#
-#     def bark(self):
-#         return f"{self.name} громко лает"
-#
-#
-# class Cat(Pet):
-#
-#     def __init__(self, name, age, master):
-#         super().__init__(name, age, master)
-#
-#     def meow(self):
-#         return f"{self.name} мурлычет на ушко"
-#
-#
-# class Parrot(Pet):
-#
-#     def __init__(self, name, age, master):
-#         super().__init__(name, age, master)
-#
-#     def fly(self):
-#         return f"{self.name} далеко летает"
-#
-#
-# tuzik = Dog("Tuzik", 2, "Petrov")
-# shanti = Cat("Shanti", 7, "Alla")
-# kesha = Parrot("Kesha", 1, "Zahar")
-# tuzik.birthday(2022)
-# shanti.birthday(2022)
-# kesha.birthday(2022)
-# print(tuzik.__dict__)
-# print(tuzik.jump())
-# print(tuzik.run())
-# print(tuzik.sleep())
-# print(tuzik.born_year)
-# print(tuzik.bark())
-# print(shanti.__dict__)
-# print(shanti.jump())
-# print(shanti.run())
-# print(shanti.sleep())
-# print(shanti.born_year)
-# print(shanti.meow())
-# print(kesha.__dict__)
-# print(kesha.jump())
-# print(kesha.run())
-# print(kesha.sleep())
-# print(kesha.born_year)
-# print(kesha.fly())
+class Pet:
+    def __init__(self, name, age, master):
+        self.name = name
+        self.age = age
+        self.master = master
+        self.born_year = None
+
+    def jump(self):
+        return f"животное {self.name} умеет прыгает"
+
+    def run(self):
+        return f"{self.name} любит бегать"
+
+    def birthday(self, current_year):
+        if not self.born_year:
+            self.born_year = current_year - self.age
+        return f"{self.name} родился в {self.born_year}"
+
+    def sleep(self):
+        return f"{self.name} сладко спит"
+
+
+class Dog(Pet):
+
+    def __init__(self, name, age, master):
+        super().__init__(name, age, master)
+
+    def bark(self):
+        return f"{self.name} громко лает"
+
+
+class Cat(Pet):
+
+    def __init__(self, name, age, master):
+        super().__init__(name, age, master)
+
+    def meow(self):
+        return f"{self.name} мурлычет на ушко"
+
+
+class Parrot(Pet):
+
+    def __init__(self, name, age, master):
+        super().__init__(name, age, master)
+
+    def fly(self):
+        return f"{self.name} далеко летает"
+
+
+tuzik = Dog("Tuzik", 2, "Petrov")
+shanti = Cat("Shanti", 7, "Alla")
+kesha = Parrot("Kesha", 1, "Zahar")
+tuzik.birthday(2022)
+shanti.birthday(2022)
+kesha.birthday(2022)
+print(tuzik.__dict__)
+print(tuzik.jump())
+print(tuzik.run())
+print(tuzik.sleep())
+print(tuzik.born_year)
+print(tuzik.bark())
+print(shanti.__dict__)
+print(shanti.jump())
+print(shanti.run())
+print(shanti.sleep())
+print(shanti.born_year)
+print(shanti.meow())
+print(kesha.__dict__)
+print(kesha.jump())
+print(kesha.run())
+print(kesha.sleep())
+print(kesha.born_year)
+print(kesha.fly())
